@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC</title>
+    <script src="assets/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <style>
+        body{
+            height: 100vh;
+            background-color: pink;
+        }
+        .alphabet-frame {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 100%;
+        }
+        .alphabet-frame img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: calc(100vh / 10);
+            max-width: calc(100vw / 5);
+        }
+    </style>
+    
+    <div class="alphabet-frame">
+        <img class="alphabet" id="alp-a" src="assets/images/a.png" alt="image not found">
+        <img class="alphabet" id="alp-b" src="assets/images/b.png" alt="image not found">
+        <img class="alphabet" id="alp-c" src="assets/images/c.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-d" src="assets/images/d.png" alt="image not found">
+        <img class="alphabet" id="alp-e" src="assets/images/e.png" alt="image not found">
+        <img class="alphabet" id="alp-f" src="assets/images/f.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-g" src="assets/images/g.png" alt="image not found">
+        <img class="alphabet" id="alp-h" src="assets/images/h.png" alt="image not found">
+        <img class="alphabet" id="alp-i" src="assets/images/i.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-j" src="assets/images/j.png" alt="image not found">
+        <img class="alphabet" id="alp-k" src="assets/images/k.png" alt="image not found">
+        <img class="alphabet" id="alp-l" src="assets/images/l.png" alt="image not found">
+
+        <img class="alphabet" id="alp-m" src="assets/images/m.png" alt="image not found">
+        <img class="alphabet" id="alp-n" src="assets/images/n.png" alt="image not found">
+        <img class="alphabet" id="alp-o" src="assets/images/o.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-p" src="assets/images/p.png" alt="image not found">
+        <img class="alphabet" id="alp-q" src="assets/images/q.png" alt="image not found">
+        <img class="alphabet" id="alp-r" src="assets/images/r.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-s" src="assets/images/s.png" alt="image not found">
+        <img class="alphabet" id="alp-t" src="assets/images/t.png" alt="image not found">
+        <img class="alphabet" id="alp-u" src="assets/images/u.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-v" src="assets/images/v.png" alt="image not found">
+        <img class="alphabet" id="alp-w" src="assets/images/w.png" alt="image not found">
+        <img class="alphabet" id="alp-x" src="assets/images/x.png" alt="image not found">
+        
+        <img class="alphabet" id="alp-y" src="assets/images/y.png" alt="image not found">
+        <img class="alphabet" id="alp-z" src="assets/images/z.png" alt="image not found">
+    </div>
+</body>
+<script>
+    const a_sound = new Audio("assets/sounds/a.m4a");
+    const b_sound = new Audio("assets/sounds/b.m4a");
+    const c_sound = new Audio("assets/sounds/c.m4a");
+    const d_sound = new Audio("assets/sounds/d.m4a");
+    const e_sound = new Audio("assets/sounds/e.m4a");
+    const f_sound = new Audio("assets/sounds/f.m4a");
+    const g_sound = new Audio("assets/sounds/g.m4a");
+    const h_sound = new Audio("assets/sounds/h.m4a");
+    const i_sound = new Audio("assets/sounds/i.m4a");
+    const j_sound = new Audio("assets/sounds/j.m4a");
+    const k_sound = new Audio("assets/sounds/k.m4a");
+    const l_sound = new Audio("assets/sounds/l.m4a");
+    const m_sound = new Audio("assets/sounds/m.m4a");
+    const n_sound = new Audio("assets/sounds/n.m4a");
+    const o_sound = new Audio("assets/sounds/o.m4a");
+    const p_sound = new Audio("assets/sounds/p.m4a");
+    const q_sound = new Audio("assets/sounds/q.m4a");
+    const r_sound = new Audio("assets/sounds/r.m4a");
+    const s_sound = new Audio("assets/sounds/s.m4a");
+    const t_sound = new Audio("assets/sounds/t.m4a");
+    const u_sound = new Audio("assets/sounds/u.m4a");
+    const v_sound = new Audio("assets/sounds/v.m4a");
+    const w_sound = new Audio("assets/sounds/w.m4a");
+    const x_sound = new Audio("assets/sounds/x.m4a");
+    const y_sound = new Audio("assets/sounds/y.m4a");
+    const z_sound = new Audio("assets/sounds/z.m4a");
+
+    $(document).ready(function(){
+        function play_sound(img, audio){
+            $(`#${img}`).click(function () {
+                audio.play();
+            })
+        }
+
+        function hovering(img){
+            $(`#${img}`).hover(function () {
+                $(this).css({
+                    'cursor': 'pointer',
+                });
+            });
+        }
+
+        hovering("alp-a")
+        hovering("alp-b")
+        hovering("alp-c")
+        hovering("alp-d")
+        hovering("alp-e")
+        hovering("alp-f")
+        hovering("alp-g")
+        hovering("alp-h")
+        hovering("alp-i")
+        hovering("alp-j")
+        hovering("alp-k")
+        hovering("alp-l")
+        hovering("alp-m")
+        hovering("alp-n")
+        hovering("alp-o")
+        hovering("alp-p")
+        hovering("alp-q")
+        hovering("alp-r")
+        hovering("alp-s")
+        hovering("alp-t")
+        hovering("alp-u")
+        hovering("alp-v")
+        hovering("alp-w")
+        hovering("alp-x")
+        hovering("alp-y")
+        hovering("alp-z")
+
+        play_sound("alp-a", a_sound)
+        play_sound("alp-b", b_sound)
+        play_sound("alp-c", c_sound)
+        play_sound("alp-d", d_sound)
+        play_sound("alp-e", e_sound)
+        play_sound("alp-f", f_sound)
+        play_sound("alp-g", g_sound)
+        play_sound("alp-h", h_sound)
+        play_sound("alp-i", i_sound)
+        play_sound("alp-j", j_sound)
+        play_sound("alp-k", k_sound)
+        play_sound("alp-l", l_sound)
+        play_sound("alp-m", m_sound)
+        play_sound("alp-n", n_sound)
+        play_sound("alp-o", o_sound)
+        play_sound("alp-p", p_sound)
+        play_sound("alp-q", q_sound)
+        play_sound("alp-r", r_sound)
+        play_sound("alp-s", s_sound)
+        play_sound("alp-t", t_sound)
+        play_sound("alp-u", u_sound)
+        play_sound("alp-v", v_sound)
+        play_sound("alp-w", w_sound)
+        play_sound("alp-x", x_sound)
+        play_sound("alp-y", y_sound)
+        play_sound("alp-z", z_sound)
+
+    })
+</script>
+</html>
